@@ -1,0 +1,57 @@
+/* additional theming for capstone */
+
+/* gh dark blue: #003a69 */
+
+/* gh yellow: f0d600 */
+
+panel-gh>.panel-heading {
+    color: #fff;
+    background-color: #003a69;
+    border-color: #003a69;
+}
+
+.sidebar {
+	margin-top: 0 !important;
+}
+
+.iiMdPreview textarea {
+	/* this copies bootstrap form-control class */
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+}
+.muted,
+a.muted {
+	color: #bcbcbc;
+}
+
+.nav-pills-sm,
+.nav-pills-xs {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin-bottom: 1em;
+	li {
+		border-right: 1px solid #ddd;
+		&.last {
+			border-right: none;
+		}		
+		a {
+		padding: 6px 9px;
+		font-size: 95%;
+		border-radius: 0px;
+		}
+	}
+}
+
+.nav-pills-xs {
+	a {
+		font-size: 85%;
+		padding: 3px 7px;
+	}
+}

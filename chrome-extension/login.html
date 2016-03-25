@@ -1,0 +1,34 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Login to code clipper app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="jquery-1.12.2.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div class="container background">
+        <h3>Login</h3>
+        <form id="loginCE">
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="email">
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="password">
+          </div>
+          <hr></hr>
+          
+          <div>
+            <button class="btn btn-block" type="submit">Login</button>
+            <button class="btn btn-block" type="submit">Sign up</button>
+          </div>
+        </form>
+    </div>
+  </body>
+</html>

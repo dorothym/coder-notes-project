@@ -1,0 +1,25 @@
+Schemas:
+
+- User
+- Note
+- Notebook
+
+
+Methods: 
+- Get all notebooks given a user ID // route
+- Get all notes given  a user ID //
+- Get all notes given a notebook ID
+- Find notebook by name
+- Find note by subject
+- Add size of note
+- Virtual for the default subject if there is no subject
+- Find note by tag
+- Find note by text
+- Create tag index
+- Create date index
+
+
+Questions to Ian: 
+- post remove notebook hooks
+	- Can I use fineOneAndUpdate?
+	- How to combine both post 'remove' hooks in one?

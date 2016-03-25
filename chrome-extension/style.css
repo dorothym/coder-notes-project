@@ -1,0 +1,50 @@
+body {
+/*  border: 3px solid gray;*/
+  font-family: "Times New Roman";
+  width: 300px;
+}
+
+html {
+  width: 300px;
+}
+
+.background {
+  background-color: #E4ECF3;
+}
+
+h4 {
+  font-family: "Times New Roman";
+  font-size: 10px;
+  font-color: orange;
+}
+
+hr {
+  border: 1px;
+  border-color: black;
+}
+
+textarea {
+  width: 100%;
+  border: 0px;
+  padding: 6px;
+}
+
+input {
+  width: 100%;
+  border: 0px;
+  padding: 6px;
+}
+
+button {
+  border: 0px;
+  padding: 10px;
+  background-color: #FF0000;
+}
+
+.form-group button {
+  color: #D4D4D4;
+}
+
+input #submit {
+  background-color: orange;
+}

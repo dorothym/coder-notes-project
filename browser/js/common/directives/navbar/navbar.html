@@ -1,0 +1,102 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="index.html">GHCodeNotes</a>
+	</div>
+	<!-- /.navbar-header -->
+
+
+	<ul class="nav navbar-top-links navbar-right">
+		<li class ="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown">
+				<button type="button" class="btn btn-success align-right"  data-toggle="tooltip" title="Add a notebook">
+					<i class="fa fa-plus"> add notebook
+					</i>
+				</button>
+			</a>
+			<ul class="dropdown-menu dropdown-messages">
+				<li>
+					<div>
+						<input type="text" ng-model="notebookTitle"><button class="btn btn-small btn-link" ng-click="newNotebook(notebookTitle)">+</button>
+						<span class="pull-right text-muted">
+						</span>
+					</div>
+				</li>
+			</ul> <!-- /.dropdown-messages -->
+			<!-- <a ng-click="newNotebook()"></a> -->
+		</li> <!-- /.dropdown -->
+
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#" ng-click="getNotebooks()">
+				<button type="button" class="btn btn-success align-right"  data-toggle="tooltip" title="Add a note">
+						<i class="fa fa-plus"> add note
+						</i>
+				</button>
+			</a>
+			<ul class="dropdown-menu dropdown-messages">
+				<div ng-repeat="notebook in notebooks">
+				<li>
+					<div>
+						<a ng-click="newNote(notebook)">Add a note to {{notebook.title}}</a>
+						<span class="pull-right text-muted">
+						</span>
+					</div>
+				</li>
+				<li class="divider"></li>
+				</div>
+			</ul> <!-- /.dropdown-messages -->
+		</li> <!-- /.dropdown -->
+
+		<li class="dropdown">	
+			<input width="25" type="text" placeholder="Search All Public Notes">
+			<input width="25" type="text" placeholder="Search My Notes" >
+<!-- 			<span class="input-group-btn">
+			<button class="btn btn-default" type="button"><i class="fa fa-search"></i>
+			</button>
+			</span>
+ -->		
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#" ng-click="getnotes()">
+				<i class="fa fa-clock-o"></i>
+				<i class="fa fa-caret-down"></i>
+			</a>
+			<ul class="dropdown-menu dropdown-messages">
+				<div ng-repeat="note in notes | limitTo: 3 | orderBy: note.lastUpdate" >
+				<li ng-click = setCurrentNote(note)>
+<!-- 					<a href="#"> -->
+					<div>
+						<strong>{{note.subject}}</strong>
+						<span class="pull-right text-muted">
+						</span>
+					</div>
+					<div>{{note.body | trunc:true:80:' ...'}}</div>
+					<div style="font-size: 80%"><em>Last updated {{note.lastUpdate | date : 'short'}}</em></div>
+					<!-- </a> -->
+				</li>
+				<li class="divider"></li>
+				</div>
+			</ul> <!-- /.dropdown-messages -->
+		</li> <!-- /.dropdown -->
+
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			<i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+			</a>
+			<ul class="dropdown-menu dropdown-user">
+				<li>
+				Welcome, {{user.firstName}}!
+				</li>
+				<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+				<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a></li>
+				<li class="divider"></li>
+				<li><a ng-click="logout()"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+			</ul> <!-- /.dropdown-user -->
+		</li> <!-- /.dropdown -->
+	</ul> <!-- /.navbar-top-links -->
+</nav>
